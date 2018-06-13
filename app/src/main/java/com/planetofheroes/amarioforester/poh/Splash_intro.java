@@ -9,13 +9,11 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Splash_intro extends AppCompatActivity {
-
-    private TextView tv;
-    private ImageView iv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +28,11 @@ public class Splash_intro extends AppCompatActivity {
             }
         }, 0);
 
-        tv = (TextView) findViewById(R.id.tv);
-        iv = (ImageView) findViewById(R.id.iv);
+        RelativeLayout psh = (RelativeLayout) findViewById(R.id.activity_spalsh);
 
 
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
-        tv.startAnimation(myanim);
-        iv.startAnimation(myanim);
+        psh.startAnimation(myanim);
         final Intent i = new Intent(this, Menu_PoHBase_Home.class);
         Thread timer = new Thread() {
             public void run() {
