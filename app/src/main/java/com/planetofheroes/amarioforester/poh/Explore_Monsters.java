@@ -11,7 +11,7 @@ public class Explore_Monsters extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_explore__monsters);
+        setContentView(R.layout.explore_monsters);
     }
     public void backBtnClick(View v){
         this.finish();

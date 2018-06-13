@@ -10,15 +10,16 @@ import android.view.View;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class PoHBaseActivity extends Left_menu {
+public class Menu_PoHBase_Home extends Left_menu {
     ImageView imageButton;
 
-    private static ViewPager mPager;
+    private ViewPager mPager;
     private static int currentPage = 0;
     private static final Integer[] slideImages = {R.drawable.introimage};
     private static final Integer[] slideImages2 = {R.drawable.icons, R.drawable.icons};
@@ -28,30 +29,28 @@ public class PoHBaseActivity extends Left_menu {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_po_hbase);
+        setContentView(R.layout.menu_pohbase_home);
         init();
         imageButton = (ImageView) findViewById(R.id.maps);
     }
 
     public void backBtnClick(View v) {
-        Intent intent = new Intent(PoHBaseActivity.this, MapExplorePage_MainScreen.class);
+        Intent intent = new Intent(Menu_PoHBase_Home.this, MapExplorePage_MainScreen.class);
         startActivity(intent);
     }
 
     private void init() {
-        for (int i = 0; i < slideImages.length; i++)
-            slideArray.add(slideImages[i]);
+        Collections.addAll(slideArray, slideImages);
 
-        for (int i = 0; i < slideImages2.length; i++)
-            slideArray2.add(slideImages2[i]);
+        Collections.addAll(slideArray2, slideImages2);
 
         mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(new Slide_adapter(PoHBaseActivity.this, slideArray));
+        mPager.setAdapter(new Slide_adapter(Menu_PoHBase_Home.this, slideArray));
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 
         mPager = (ViewPager) findViewById(R.id.bestpicks);
-        mPager.setAdapter(new Slide_adapter(PoHBaseActivity.this, slideArray2));
+        mPager.setAdapter(new Slide_adapter(Menu_PoHBase_Home.this, slideArray2));
         indicator = (CircleIndicator) findViewById(R.id.bestpicks2);
         indicator.setViewPager(mPager);
 

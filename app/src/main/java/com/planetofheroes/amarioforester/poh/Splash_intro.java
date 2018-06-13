@@ -20,7 +20,7 @@ public class Splash_intro extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.intro_splash);
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -37,7 +37,7 @@ public class Splash_intro extends AppCompatActivity {
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
         tv.startAnimation(myanim);
         iv.startAnimation(myanim);
-        final Intent i = new Intent(this, PoHBaseActivity.class);
+        final Intent i = new Intent(this, Menu_PoHBase_Home.class);
         Thread timer = new Thread() {
             public void run() {
                 try {

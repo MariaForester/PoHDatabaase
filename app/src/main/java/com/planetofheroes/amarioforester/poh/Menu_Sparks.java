@@ -12,13 +12,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SparksActivity extends Left_menu {
+public class Menu_Sparks extends Left_menu {
     Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sparks);
+        setContentView(R.layout.menu_sparks);
 
         EditText editText = (EditText) findViewById(R.id.type_spark);
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -31,31 +31,31 @@ public class SparksActivity extends Left_menu {
                         Toast.makeText(getApplicationContext(), "This lvl doesn't exist", Toast.LENGTH_SHORT).show();
                     }
                     if (Integer.parseInt(inputString) > 0 &&Integer.parseInt(inputString) < 6) {
-                        Intent intent = new Intent(SparksActivity.this, Sparks_1_5.class);
+                        Intent intent = new Intent(Menu_Sparks.this, Sparks_1_5.class);
                         startActivity(intent);
                     }
                     if (Integer.parseInt(inputString) > 5 && Integer.parseInt(inputString) < 11) {
-                        Intent intent = new Intent(SparksActivity.this, Sparks_6_10.class);
+                        Intent intent = new Intent(Menu_Sparks.this, Sparks_6_10.class);
                         startActivity(intent);
                     }
                     if (Integer.parseInt(inputString) > 10 && Integer.parseInt(inputString) < 16) {
-                        Intent intent = new Intent(SparksActivity.this, Sparks_11_15.class);
+                        Intent intent = new Intent(Menu_Sparks.this, Sparks_11_15.class);
                         startActivity(intent);
                     }
                     if (Integer.parseInt(inputString) > 15 && Integer.parseInt(inputString) < 21) {
-                        Intent intent = new Intent(SparksActivity.this, Sparks_16_20.class);
+                        Intent intent = new Intent(Menu_Sparks.this, Sparks_16_20.class);
                         startActivity(intent);
                     }
                     if (Integer.parseInt(inputString) > 20 && Integer.parseInt(inputString) < 26) {
-                        Intent intent = new Intent(SparksActivity.this, Sparks_21_25.class);
+                        Intent intent = new Intent(Menu_Sparks.this, Sparks_21_25.class);
                         startActivity(intent);
                     }
                     if (Integer.parseInt(inputString) > 25 && Integer.parseInt(inputString) < 31) {
-                        Intent intent = new Intent(SparksActivity.this, Sparks_26_30.class);
+                        Intent intent = new Intent(Menu_Sparks.this, Sparks_26_30.class);
                         startActivity(intent);
                     }
                 }
-                return handled;
+                return false;
             }
         });
 
@@ -63,7 +63,7 @@ public class SparksActivity extends Left_menu {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(SparksActivity.this, button);
+                PopupMenu popupMenu = new PopupMenu(Menu_Sparks.this, button);
                 popupMenu.getMenuInflater().inflate(R.menu.sparks_lvl, popupMenu.getMenu());
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
@@ -96,7 +96,7 @@ public class SparksActivity extends Left_menu {
     @Override                              //masha - back button - to the main act
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            Intent intent = new Intent(SparksActivity.this, PoHBaseActivity.class);
+            Intent intent = new Intent(Menu_Sparks.this, Menu_PoHBase_Home.class);
             startActivity(intent);
             this.finish();
         }

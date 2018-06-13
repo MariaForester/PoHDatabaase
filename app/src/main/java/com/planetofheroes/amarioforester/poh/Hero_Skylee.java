@@ -6,13 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Hero_Skylee extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.hero_skylee);
+        setContentView(R.layout.hero_layout);
+
+        TextView heroText = (TextView) findViewById(R.id.heroText);
+        heroText.setText("Skylee coming soon");
     }
 
     public void backBtnClick(View v){

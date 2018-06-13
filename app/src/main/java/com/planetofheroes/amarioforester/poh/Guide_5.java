@@ -6,16 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Guide_5 extends AppCompatActivity {
-    Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guide_5);
+        setContentView(R.layout.guide_layout);
 
-        backButton = (Button) findViewById(R.id.backBtnGuide5);
+        TextView heroText = (TextView) findViewById(R.id.guideText);
+        heroText.setText("Some guide coming soon");
     }
 
     public void backBtnClick(View v) {

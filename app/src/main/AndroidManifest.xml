@@ -21,22 +21,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ArtsActivity"
+            android:name=".Menu_Arts"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".GuidesActivity"
+            android:name=".Menu_Guides"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".HeroesActivity"
+            android:name=".Menu_Heroes"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PoHBaseActivity"
+            android:name=".Menu_PoHBase_Home"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SparksActivity"
+            android:name=".Menu_Sparks"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TournamentsActivity"
+            android:name=".Menu_Tournaments"
             android:screenOrientation="portrait" />
         // Heroes Page
         <activity

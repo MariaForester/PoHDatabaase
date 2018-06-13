@@ -11,7 +11,7 @@ public class Explore_Towers extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_explore__towers);
+        setContentView(R.layout.explore_towers);
     }
     public void backBtnClick(View v){
         this.finish();

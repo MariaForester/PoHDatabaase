@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class HeroesActivity extends Left_menu {
+public class Menu_Heroes extends Left_menu {
 
     private ListView listView;
     private List_heroAdapter mAdapter;
@@ -17,7 +17,7 @@ public class HeroesActivity extends Left_menu {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_heroes);
+        setContentView(R.layout.menu_heroes);
 
         // List on HeroesFragment page // Masha
 
@@ -86,7 +86,7 @@ public class HeroesActivity extends Left_menu {
     @Override                              //masha - back button - to the main act
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            Intent intent = new Intent(HeroesActivity.this, PoHBaseActivity.class);
+            Intent intent = new Intent(Menu_Heroes.this, Menu_PoHBase_Home.class);
             startActivity(intent);
             this.finish();
         }

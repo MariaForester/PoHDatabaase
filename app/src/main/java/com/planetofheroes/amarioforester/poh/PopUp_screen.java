@@ -35,7 +35,7 @@ public class PopUp_screen extends Activity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PopUp_screen.this, GuidesActivity.class));
+                startActivity(new Intent(PopUp_screen.this, Menu_Guides.class));
             }
         });
 

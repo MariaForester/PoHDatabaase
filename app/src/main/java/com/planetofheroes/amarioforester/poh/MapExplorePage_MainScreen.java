@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 
 public class MapExplorePage_MainScreen extends AppCompatActivity {
@@ -14,7 +13,7 @@ public class MapExplorePage_MainScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map_explore_page);
+        setContentView(R.layout.explore_main);
 
         ImageView gliphs = (ImageView) findViewById(R.id.gliphs);
         gliphs.setOnClickListener(new View.OnClickListener() {

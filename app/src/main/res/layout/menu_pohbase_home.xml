@@ -55,7 +55,7 @@
             android:lineSpacingExtra="36sp"
             android:text="Best Team Picks"
             android:textColor="@color/menuButtons"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <me.relex.circleindicator.CircleIndicator

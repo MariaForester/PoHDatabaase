@@ -11,7 +11,7 @@ public class Explore_Gliphs extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_explore__gliphs);
+        setContentView(R.layout.explore_gliphs);
     }
     public void backBtnClick(View v){
         this.finish();

@@ -5,13 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 public class Explore_Queen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_explore__queen);
+        setContentView(R.layout.explore_bosses_layout);
+
+        TextView heroText = (TextView) findViewById(R.id.bossText);
+        heroText.setText("Queen coming soon");
     }
     public void backBtnClick(View v){
         this.finish();

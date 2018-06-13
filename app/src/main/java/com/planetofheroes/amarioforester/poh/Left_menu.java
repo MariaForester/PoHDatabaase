@@ -119,31 +119,31 @@ public abstract class Left_menu extends AppCompatActivity implements MenuItem.On
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.pohbase:
-                Intent myintent = new Intent(getBaseContext(), PoHBaseActivity.class);
+                Intent myintent = new Intent(getBaseContext(), Menu_PoHBase_Home.class);
                 startActivityForResult(myintent, 0);
                 break;
             case R.id.heroes:
-                Intent myintent1 = new Intent(getBaseContext(), HeroesActivity.class);
+                Intent myintent1 = new Intent(getBaseContext(), Menu_Heroes.class);
                 startActivityForResult(myintent1, 1);
                 break;
             case R.id.sparks:
-                Intent myintent2 = new Intent(getBaseContext(), SparksActivity.class);
+                Intent myintent2 = new Intent(getBaseContext(), Menu_Sparks.class);
                 startActivityForResult(myintent2, 2);
                 break;
             case R.id.guides:
-                Intent myintent3 = new Intent(getBaseContext(), GuidesActivity.class);
+                Intent myintent3 = new Intent(getBaseContext(), Menu_Guides.class);
                 startActivityForResult(myintent3, 3);
                 break;
             case R.id.tournaments:
-                Intent myintent4 = new Intent(getBaseContext(), TournamentsActivity.class);
+                Intent myintent4 = new Intent(getBaseContext(), Menu_Tournaments.class);
                 startActivityForResult(myintent4, 4);
                 break;
             case R.id.arts:
-                Intent myintent5 = new Intent(getBaseContext(), ArtsActivity.class);
+                Intent myintent5 = new Intent(getBaseContext(), Menu_Arts.class);
                 startActivityForResult(myintent5, 5);
                 break;
             default:
-                Intent myintent6 = new Intent(getBaseContext(), PoHBaseActivity.class);
+                Intent myintent6 = new Intent(getBaseContext(), Menu_PoHBase_Home.class);
                 startActivityForResult(myintent6, 6);
                 break;
         }

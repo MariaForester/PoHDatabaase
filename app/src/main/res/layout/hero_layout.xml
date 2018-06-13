@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Hero_Bubbles"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:id="@+id/guide5"
-    tools:context=".Guide_5">
+    android:id="@+id/bubble">
 
     <ImageView
         android:layout_width="match_parent"
@@ -12,22 +12,17 @@
         android:src="@drawable/explore_background"
         android:scaleType="centerCrop"
         />
-
     <TextView
+        android:id="@+id/heroText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Coming Soon"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:fontFamily="@font/extrabold"
         android:textColor="@color/menuButtons"/>
-
     <Button
-        android:id="@+id/backBtnGuide5"
         android:layout_width="60dp"
         android:layout_height="24dp"
         android:background="@drawable/arrowback"
-        android:onClick="backBtnClick"
-        android:longClickable="true"/>
-
-</android.support.constraint.ConstraintLayout>
+        android:onClick="backBtnClick" />
+</FrameLayout>

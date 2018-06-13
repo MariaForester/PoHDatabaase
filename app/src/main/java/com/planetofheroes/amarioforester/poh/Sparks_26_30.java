@@ -6,18 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Sparks_26_30 extends AppCompatActivity {
-    Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sparks_twentysix_thirty);
-
-
-
-        backButton = (Button) findViewById(R.id.backBtnSparksTwentysixThirty);
+        setContentView(R.layout.sparks_layout);
+        TextView sparksText = (TextView) findViewById(R.id.sparksText);
+        sparksText.setText("Your level is 26-30");
     }
 
     public void backBtnClick(View v){
