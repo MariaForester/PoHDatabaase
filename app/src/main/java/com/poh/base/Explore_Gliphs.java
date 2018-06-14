@@ -15,7 +15,7 @@ public class Explore_Gliphs extends AppCompatActivity {
     }
     public void backBtnClick(View v){
         this.finish();
-    }
+    } 
 
     @Override
     protected void onResume() {
