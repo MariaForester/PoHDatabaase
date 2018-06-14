@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Hero_Bubbles"
+    tools:context="com.poh.base.Hero_Bubbles"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@+id/bubble">
