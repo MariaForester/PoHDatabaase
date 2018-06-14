@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "569540333678",
+    "firebase_url": "https://planet-of-heroes-base.firebaseio.com",
+    "project_id": "planet-of-heroes-base",
+    "storage_bucket": "planet-of-heroes-base.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569540333678:android:cdc18acc79b3092c",
+        "android_client_info": {
+          "package_name": "com.poh.base"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569540333678-nsnkf0c9n830qbe8sf6o9v2njn50cfv7.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "569540333678-nsnkf0c9n830qbe8sf6o9v2njn50cfv7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0Wso2KxOPwghZUX_g7CxTs2vE7wVaG9Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
