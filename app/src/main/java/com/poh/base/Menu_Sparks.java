@@ -31,7 +31,7 @@ public class Menu_Sparks extends Left_menu {
                         Toast.makeText(getApplicationContext(), "This lvl doesn't exist", Toast.LENGTH_SHORT).show();
                     }
                     if (Integer.parseInt(inputString) > 0 &&Integer.parseInt(inputString) < 6) {
-                        Intent intent = new Intent(Menu_Sparks.this, Sparks_1_5.class);
+                        Intent intent = new Intent(Menu_Sparks.this, sparkView3.class);
                         startActivity(intent);
                     }
                     if (Integer.parseInt(inputString) > 5 && Integer.parseInt(inputString) < 11) {
@@ -70,19 +70,19 @@ public class Menu_Sparks extends Left_menu {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.common:
-                                Intent myintent = new Intent(getBaseContext(), Hero_BlueBeard.class);
+                                Intent myintent = new Intent(getBaseContext(), sparkView.class);
                                 startActivityForResult(myintent, 0);
                                 break;
                             case R.id.rare:
-                                Intent myintent1 = new Intent(getBaseContext(), Explore_Archon.class);
+                                Intent myintent1 = new Intent(getBaseContext(), sparkView2.class);
                                 startActivityForResult(myintent1, 1);
                                 break;
                             case R.id.epic:
-                                Intent myintent2 = new Intent(getBaseContext(), Hero_BlueBeard.class);
+                                Intent myintent2 = new Intent(getBaseContext(), sparkView2.class);
                                 startActivityForResult(myintent2, 2);
                                 break;
                             default:
-                                Intent myintent3 = new Intent(getBaseContext(), Hero_Iffir.class);
+                                Intent myintent3 = new Intent(getBaseContext(), sparkView2.class);
                                 startActivityForResult(myintent3, 3);
                         }
                         return true;

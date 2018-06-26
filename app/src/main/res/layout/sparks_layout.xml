@@ -4,16 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Sparks_1_5"
-    android:background="@drawable/background"
-    android:id="@+id/sparks">
+    android:id="@+id/sparks"
+    android:background="@drawable/explore_background">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sparkView"
+        android:scaleType="centerCrop"
+        />
 
     <TextView
         android:id="@+id/sparksText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:textColor="@color/colorAccent"
-        android:fontFamily="@font/a_avantebs" />
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="30sp"
+        android:textColor="@color/menuButtons"
+        android:fontFamily="@font/extrabold" />
 
     <Button
         android:layout_width="60dp"

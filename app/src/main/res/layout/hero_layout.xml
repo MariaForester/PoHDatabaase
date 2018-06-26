@@ -7,6 +7,7 @@
     android:id="@+id/bubble">
 
     <ImageView
+        android:id="@+id/heroImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/explore_background"

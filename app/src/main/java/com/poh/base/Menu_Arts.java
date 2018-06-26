@@ -10,9 +10,15 @@ import android.widget.GridView;
 public class Menu_Arts extends Left_menu {
 
     GridView simpleGrid;
-    int logos[] = {R.drawable.background, R.drawable.introimage, R.drawable.exploremaps,
-            R.drawable.square, R.drawable.square, R.drawable.square, R.drawable.square
-            , R.drawable.square, R.drawable.square, R.drawable.square};
+    int logos[] = {R.drawable.skysqr, R.drawable.duncsqr, R.drawable.candsqr,
+            R.drawable.bluesq, R.drawable.bubbsqr, R.drawable.candsqr, R.drawable.duncsqr
+            , R.drawable.bubbsqr, R.drawable.bluesq, R.drawable.skysqr, R.drawable.skysqr, R.drawable.duncsqr, R.drawable.candsqr,
+            R.drawable.bluesq, R.drawable.bubbsqr, R.drawable.candsqr, R.drawable.duncsqr
+            , R.drawable.bubbsqr, R.drawable.bluesq, R.drawable.skysqr, R.drawable.skysqr, R.drawable.duncsqr, R.drawable.candsqr,
+            R.drawable.bluesq, R.drawable.bubbsqr, R.drawable.candsqr, R.drawable.duncsqr
+            , R.drawable.bubbsqr, R.drawable.bluesq, R.drawable.skysqr, R.drawable.skysqr, R.drawable.duncsqr, R.drawable.candsqr,
+            R.drawable.bluesq, R.drawable.bubbsqr, R.drawable.candsqr, R.drawable.duncsqr
+            , R.drawable.bubbsqr, R.drawable.bluesq, R.drawable.skysqr};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

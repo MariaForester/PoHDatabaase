@@ -9,6 +9,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.firebase.ui.storage.images.FirebaseImageLoader;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Timer;
@@ -17,12 +22,11 @@ import java.util.TimerTask;
 import me.relex.circleindicator.CircleIndicator;
 
 public class Menu_PoHBase_Home extends Left_menu {
-    ImageView imageButton;
 
     private ViewPager mPager;
     private static int currentPage = 0;
-    private static final Integer[] slideImages = {R.drawable.introimage};
-    private static final Integer[] slideImages2 = {R.drawable.icons, R.drawable.icons};
+    private static final Integer[] slideImages = {R.drawable.sofiawelcometwo};
+    private static final Integer[] slideImages2 = {R.drawable.icons, R.drawable.icons_test2};
     private ArrayList<Integer> slideArray = new ArrayList<>();
     private ArrayList<Integer> slideArray2 = new ArrayList<>();
 
@@ -31,10 +35,9 @@ public class Menu_PoHBase_Home extends Left_menu {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_pohbase_home);
         init();
-        imageButton = (ImageView) findViewById(R.id.maps);
     }
 
-    public void backBtnClick(View v) {
+    public void BtnClick(View v) {
         Intent intent = new Intent(Menu_PoHBase_Home.this, MapExplorePage_MainScreen.class);
         startActivity(intent);
     }

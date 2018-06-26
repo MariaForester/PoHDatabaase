@@ -10,6 +10,7 @@
     tools:context=".Menu_Sparks">
 
     <EditText
+        android:layout_margin="10dp"
         android:id="@+id/type_spark"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -17,19 +18,18 @@
         android:ems="200"
         android:imeOptions="actionNext"
         android:inputType="number"
-        android:hint="type"
-        android:textAlignment="center"
+        android:hint=" type"
+        android:fontFamily="@font/a_avantebs"
         android:textSize="28sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/extrabold"
         android:textColorHint="@color/menuButtons"
         android:textColor="@color/menuButtons"
-        android:autofillHints="100"
-        android:background="@drawable/sparksbar"
+        android:backgroundTint="@color/menuButtons"
             />
+
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="nana"
-        android:id="@+id/button"/>
+        android:layout_gravity="center"
+        android:text="Spark type" />
 </LinearLayout>

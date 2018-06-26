@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Hero_BlueBeard extends AppCompatActivity {
@@ -14,8 +15,8 @@ public class Hero_BlueBeard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hero_layout);
 
-        TextView heroText = (TextView) findViewById(R.id.heroText);
-        heroText.setText("BlueBeard coming soon");
+        ImageView heroImage = (ImageView) findViewById(R.id.heroImage);
+        heroImage.setImageResource(R.drawable.eizo_test);
         }
 
     public void backBtnClick(View v){

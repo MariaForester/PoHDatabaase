@@ -19,33 +19,34 @@ public class Menu_Heroes extends Left_menu {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_heroes);
 
-        // List on HeroesFragment page // Masha
-
         listView = (ListView) findViewById(R.id.heroes_list);
-        ArrayList<List_heroImage> heroesList = new ArrayList<>();
-        heroesList.add(new List_heroImage(R.drawable.blueb));
+
+        ArrayList<List_heroImage> heroesList = new ArrayList<>(20);
+
+        heroesList.add(new List_heroImage(R.drawable.sof));
+        heroesList.add(new List_heroImage(R.drawable.timm));
+        heroesList.add(new List_heroImage(R.drawable.ask));
+        heroesList.add(new List_heroImage(R.drawable.lib));
+        heroesList.add(new List_heroImage(R.drawable.anna));
+        heroesList.add(new List_heroImage(R.drawable.khan));
+        heroesList.add(new List_heroImage(R.drawable.eizo));
+        heroesList.add(new List_heroImage(R.drawable.yumi));
+        heroesList.add(new List_heroImage(R.drawable.iff));
+        heroesList.add(new List_heroImage(R.drawable.leon));
+        heroesList.add(new List_heroImage(R.drawable.neelu));
+        heroesList.add(new List_heroImage(R.drawable.doz));
+        heroesList.add(new List_heroImage(R.drawable.cand));
+        heroesList.add(new List_heroImage(R.drawable.zarx));
+        heroesList.add(new List_heroImage(R.drawable.sky));
         heroesList.add(new List_heroImage(R.drawable.bubb));
-        heroesList.add(new List_heroImage(R.drawable.dun));
-        heroesList.add(new List_heroImage(R.drawable.cand));
-        heroesList.add(new List_heroImage(R.drawable.sky));
-        heroesList.add(new List_heroImage(R.drawable.timm));
-        heroesList.add(new List_heroImage(R.drawable.iff));
-        heroesList.add(new List_heroImage(R.drawable.timm));
-        heroesList.add(new List_heroImage(R.drawable.dun));
-        heroesList.add(new List_heroImage(R.drawable.sky));
-        heroesList.add(new List_heroImage(R.drawable.cand));
-        heroesList.add(new List_heroImage(R.drawable.timm));
-        heroesList.add(new List_heroImage(R.drawable.iff));
-        heroesList.add(new List_heroImage(R.drawable.timm));
-        heroesList.add(new List_heroImage(R.drawable.dun));
-        heroesList.add(new List_heroImage(R.drawable.sky));
-        heroesList.add(new List_heroImage(R.drawable.cand));
+        heroesList.add(new List_heroImage(R.drawable.magn));
+        heroesList.add(new List_heroImage(R.drawable.rond));
+        heroesList.add(new List_heroImage(R.drawable.dunc));
+        heroesList.add(new List_heroImage(R.drawable.blue));
 
 
         mAdapter = new List_heroAdapter(this, heroesList);
         listView.setAdapter(mAdapter);
-
-        // Clickable list buttons on heroes // Masha + Dany
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -83,7 +84,7 @@ public class Menu_Heroes extends Left_menu {
         });
     }
 
-    @Override                              //masha - back button - to the main act
+    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             Intent intent = new Intent(Menu_Heroes.this, Menu_PoHBase_Home.class);

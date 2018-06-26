@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Explore_Queen extends AppCompatActivity {
@@ -16,6 +17,9 @@ public class Explore_Queen extends AppCompatActivity {
 
         TextView heroText = (TextView) findViewById(R.id.bossText);
         heroText.setText("Queen coming soon");
+
+        ImageView queenImage = (ImageView) findViewById(R.id.photox);
+        queenImage.setImageResource(R.drawable.explore_background);
     }
     public void backBtnClick(View v){
         this.finish();

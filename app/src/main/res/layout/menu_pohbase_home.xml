@@ -55,7 +55,7 @@
             android:lineSpacingExtra="36sp"
             android:text="Best Team Picks"
             android:textColor="@color/menuButtons"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <me.relex.circleindicator.CircleIndicator
@@ -78,6 +78,6 @@
         android:scaleType="centerCrop"
         android:layout_gravity="center"
         android:id="@+id/maps"
-        android:onClick="backBtnClick">
+        android:onClick="BtnClick">
     </ImageView>
 </LinearLayout>

@@ -15,7 +15,7 @@ public class Guide_2 extends AppCompatActivity {
         setContentView(R.layout.guide_layout);
 
         TextView heroText = (TextView) findViewById(R.id.guideText);
-        heroText.setText("Some guide coming soon");
+        heroText.setText("Duncan guide coming soon");
     }
 
     public void backBtnClick(View v) {
