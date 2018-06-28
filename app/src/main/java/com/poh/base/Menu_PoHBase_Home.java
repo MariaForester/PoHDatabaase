@@ -102,7 +102,6 @@ public class Menu_PoHBase_Home extends Left_menu {
         indicator = (CircleIndicator) findViewById(R.id.bestpicks2);
         indicator.setViewPager(mPager);
 
-
         final Handler handler = new Handler();
         final Runnable Update = new Runnable() {
             public void run() {

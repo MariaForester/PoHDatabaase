@@ -121,30 +121,37 @@ public abstract class Left_menu extends AppCompatActivity implements MenuItem.On
             case R.id.pohbase:
                 Intent myintent = new Intent(getBaseContext(), Menu_PoHBase_Home.class);
                 startActivityForResult(myintent, 0);
+                this.finish();
                 break;
             case R.id.heroes:
                 Intent myintent1 = new Intent(getBaseContext(), Menu_Heroes.class);
                 startActivityForResult(myintent1, 1);
+                this.finish();
                 break;
             case R.id.sparks:
                 Intent myintent2 = new Intent(getBaseContext(), Menu_Sparks.class);
                 startActivityForResult(myintent2, 2);
+                this.finish();
                 break;
             case R.id.guides:
                 Intent myintent3 = new Intent(getBaseContext(), Menu_Guides.class);
                 startActivityForResult(myintent3, 3);
+                this.finish();
                 break;
             case R.id.tournaments:
                 Intent myintent4 = new Intent(getBaseContext(), Menu_Tournaments.class);
                 startActivityForResult(myintent4, 4);
+                this.finish();
                 break;
             case R.id.arts:
                 Intent myintent5 = new Intent(getBaseContext(), Menu_Arts.class);
                 startActivityForResult(myintent5, 5);
+                this.finish();
                 break;
             default:
                 Intent myintent6 = new Intent(getBaseContext(), Menu_PoHBase_Home.class);
                 startActivityForResult(myintent6, 6);
+                this.finish();
                 break;
         }
         item.setChecked(true);
