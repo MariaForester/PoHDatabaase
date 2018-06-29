@@ -31,66 +31,26 @@ public class Splash_intro extends AppCompatActivity {
             }
         }, 0);
 
-        if (!isConnected(Splash_intro.this)) {
-            buildDialog(Splash_intro.this).show();
-        }
 
-        else {
-            RelativeLayout psh = (RelativeLayout) findViewById(R.id.activity_spalsh);
+        RelativeLayout psh = (RelativeLayout) findViewById(R.id.activity_spalsh);
 
-            Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
-            psh.startAnimation(myanim);
-            final Intent i = new Intent(this, Menu_PoHBase_Home.class);
-            Thread timer = new Thread() {
-                public void run() {
-                    try {
-                        sleep(2000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } finally {
-                        startActivity(i);
-                        finish();
-                    }
+        Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
+        psh.startAnimation(myanim);
+        final Intent i = new Intent(this, Menu_PoHBase_Home.class);
+        Thread timer = new Thread() {
+            public void run() {
+                try {
+                    sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    startActivity(i);
+                    finish();
                 }
-            };
-            timer.start();
-        }
-    }
-
-    public boolean isConnected(Context context) {
-
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netinfo = cm.getActiveNetworkInfo();
-
-        if (netinfo != null && netinfo.isConnectedOrConnecting()) {
-            android.net.NetworkInfo wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-            android.net.NetworkInfo mobile = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-
-            return (mobile != null && mobile.isConnectedOrConnecting()) || (wifi != null && wifi.isConnectedOrConnecting());
-        } else
-            return false;
-    }
-
-    public AlertDialog.Builder buildDialog(Context c) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(c);
-        builder.setCancelable(false);
-        builder.setTitle("No Internet Connection");
-        builder.setMessage("Connect Your Device To Continue");
-        builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finish();
             }
-        });
-        builder.setNegativeButton("Continue", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent i = new Intent(Splash_intro.this, Splash_intro.class);
-                finish();
-                startActivity(i);
-            }
-        });
-        return builder;
+        };
+        timer.start();
+
     }
 
     @Override                                                //masha - non-clickable back button

@@ -43,7 +43,6 @@ public class Menu_PoHBase_Home extends Left_menu {
         init();
     }
 
-    /*
     @Override
     protected void onResume() {
         super.onResume();
@@ -88,7 +87,6 @@ public class Menu_PoHBase_Home extends Left_menu {
         });
         return builder;
     }
-    */
 
     public void BtnClick(View v) {
         Intent intent = new Intent(Menu_PoHBase_Home.this, MapExplorePage_MainScreen.class);
