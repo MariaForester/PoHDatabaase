@@ -14,6 +14,7 @@ import com.firebase.client.ValueEventListener;
 
 public class Hero_BlueBeard extends AppCompatActivity {
     // Firebase myFirebase;
+    // private ProgressBar spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +30,20 @@ public class Hero_BlueBeard extends AppCompatActivity {
 
         myFirebase = new Firebase("https://planet-of-heroes-base.firebaseio.com/Text");
 
+        spinner=(ProgressBar)findViewById(R.id.progressBar);
+        spinner.setVisibility(View.VISIBLE);
+
         myFirebase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                spinner.setVisibility(View.GONE);
                 String myChildText = dataSnapshot.getValue(String.class);
                 heroText.setText(myChildText);
             }
 
             @Override
             public void onCancelled(com.firebase.client.FirebaseError firebaseError) {
+                spinner.setVisibility(View.GONE);
                 heroText.setText("Error found");
             }
         });
