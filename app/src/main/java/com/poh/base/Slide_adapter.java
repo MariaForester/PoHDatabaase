@@ -1,6 +1,7 @@
 package com.poh.base;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,10 +16,10 @@ public class Slide_adapter extends PagerAdapter {
     private LayoutInflater inflater;
     private Context context;
 
-    public Slide_adapter(Context context, ArrayList<Integer> images) {
+    Slide_adapter(Context context, ArrayList<Integer> images) {
         this.context = context;
-        this.images=images;
-        inflater = LayoutInflater.from(context);
+        this.images = images;
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -31,11 +32,11 @@ public class Slide_adapter extends PagerAdapter {
         return images.size();
     }
 
+    @NonNull
     @Override
     public Object instantiateItem(ViewGroup view, int position) {
-        View myImageLayout = inflater.inflate(R.layout.slide_set, view, false);
-        ImageView myImage = (ImageView) myImageLayout
-                .findViewById(R.id.image);
+        View myImageLayout = inflater.inflate(R.layout.slide_set, null);
+        ImageView myImage = (ImageView) myImageLayout.findViewById(R.id.image);
         myImage.setImageResource(images.get(position));
         view.addView(myImageLayout, 0);
         return myImageLayout;
@@ -43,6 +44,6 @@ public class Slide_adapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view.equals(object);
+        return view == object;
     }
 }

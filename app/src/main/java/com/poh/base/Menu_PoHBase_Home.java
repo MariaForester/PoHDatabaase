@@ -28,7 +28,6 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class Menu_PoHBase_Home extends Left_menu {
 
-    private ViewPager mPager;
     private static int currentPage = 0;
     private static final Integer[] slideImages = {R.drawable.sofiawelcometwo};
     private static final Integer[] slideImages2 = {R.drawable.icons, R.drawable.icons_test2};
@@ -51,7 +50,6 @@ public class Menu_PoHBase_Home extends Left_menu {
         }
 
     }
-
 
 
     public boolean isConnected(Context context) {
@@ -96,18 +94,14 @@ public class Menu_PoHBase_Home extends Left_menu {
     }
 
     private void init() {
+
+        // Main slider
+
         Collections.addAll(slideArray, slideImages);
 
-        Collections.addAll(slideArray2, slideImages2);
-
-        mPager = (ViewPager) findViewById(R.id.pager);
+        final ViewPager mPager = (ViewPager) findViewById(R.id.pager);
         mPager.setAdapter(new Slide_adapter(Menu_PoHBase_Home.this, slideArray));
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
-        indicator.setViewPager(mPager);
-
-        mPager = (ViewPager) findViewById(R.id.bestpicks);
-        mPager.setAdapter(new Slide_adapter(Menu_PoHBase_Home.this, slideArray2));
-        indicator = (CircleIndicator) findViewById(R.id.bestpicks2);
         indicator.setViewPager(mPager);
 
         final Handler handler = new Handler();
@@ -127,6 +121,15 @@ public class Menu_PoHBase_Home extends Left_menu {
                 handler.post(Update);
             }
         }, 0, 5000);
+
+        // best picks slider
+
+        Collections.addAll(slideArray2, slideImages2);
+
+        ViewPager mPager2 = (ViewPager) findViewById(R.id.bestpicks);
+        mPager2.setAdapter(new Slide_adapter(Menu_PoHBase_Home.this, slideArray2));
+        indicator = (CircleIndicator) findViewById(R.id.bestpicks2);
+        indicator.setViewPager(mPager2);
     }
 
     @Override
