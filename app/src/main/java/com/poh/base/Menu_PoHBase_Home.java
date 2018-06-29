@@ -52,6 +52,8 @@ public class Menu_PoHBase_Home extends Left_menu {
 
     }
 
+
+
     public boolean isConnected(Context context) {
 
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
