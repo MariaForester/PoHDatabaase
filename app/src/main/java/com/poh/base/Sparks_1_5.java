@@ -15,7 +15,7 @@ public class Sparks_1_5 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sparks_layout);
         TextView sparksText = (TextView) findViewById(R.id.sparksText);
-        sparksText.setText("Your level is 1-5");
+        sparksText.setText("Your level is 1-5"); 
     }
 
     public void backBtnClick(View v){
