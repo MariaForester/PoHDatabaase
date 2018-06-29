@@ -21,28 +21,28 @@ public class Menu_Heroes extends Left_menu {
 
         listView = (ListView) findViewById(R.id.heroes_list);
 
-        ArrayList<List_heroImage> heroesList = new ArrayList<>(20);
+        ArrayList<List_heroStructure> heroesList = new ArrayList<>(20);
 
-        heroesList.add(new List_heroImage(R.drawable.sof));
-        heroesList.add(new List_heroImage(R.drawable.timm));
-        heroesList.add(new List_heroImage(R.drawable.ask));
-        heroesList.add(new List_heroImage(R.drawable.lib));
-        heroesList.add(new List_heroImage(R.drawable.anna));
-        heroesList.add(new List_heroImage(R.drawable.khan));
-        heroesList.add(new List_heroImage(R.drawable.eizo));
-        heroesList.add(new List_heroImage(R.drawable.yumi));
-        heroesList.add(new List_heroImage(R.drawable.iff));
-        heroesList.add(new List_heroImage(R.drawable.leon));
-        heroesList.add(new List_heroImage(R.drawable.neelu));
-        heroesList.add(new List_heroImage(R.drawable.doz));
-        heroesList.add(new List_heroImage(R.drawable.cand));
-        heroesList.add(new List_heroImage(R.drawable.zarx));
-        heroesList.add(new List_heroImage(R.drawable.sky));
-        heroesList.add(new List_heroImage(R.drawable.bubb));
-        heroesList.add(new List_heroImage(R.drawable.magn));
-        heroesList.add(new List_heroImage(R.drawable.rond));
-        heroesList.add(new List_heroImage(R.drawable.dunc));
-        heroesList.add(new List_heroImage(R.drawable.blue));
+        heroesList.add(new List_heroStructure(R.drawable.sof, "Sofia"));
+        heroesList.add(new List_heroStructure(R.drawable.timm, "Timmy"));
+        heroesList.add(new List_heroStructure(R.drawable.ask, "Askari"));
+        heroesList.add(new List_heroStructure(R.drawable.lib, "Libertron"));
+        heroesList.add(new List_heroStructure(R.drawable.anna, "Anna"));
+        heroesList.add(new List_heroStructure(R.drawable.khan, "Khan'ley"));
+        heroesList.add(new List_heroStructure(R.drawable.eizo, "Eizo"));
+        heroesList.add(new List_heroStructure(R.drawable.yumi, "Yumi"));
+        heroesList.add(new List_heroStructure(R.drawable.iff, "Iffir"));
+        heroesList.add(new List_heroStructure(R.drawable.leon, "Leon"));
+        heroesList.add(new List_heroStructure(R.drawable.neelu, "Neelu"));
+        heroesList.add(new List_heroStructure(R.drawable.doz, "Dozer"));
+        heroesList.add(new List_heroStructure(R.drawable.cand, "Candy"));
+        heroesList.add(new List_heroStructure(R.drawable.zarx, "Zarx"));
+        heroesList.add(new List_heroStructure(R.drawable.sky, "Sky'lee"));
+        heroesList.add(new List_heroStructure(R.drawable.bubb, "Bubbles"));
+        heroesList.add(new List_heroStructure(R.drawable.magn, "Magnum"));
+        heroesList.add(new List_heroStructure(R.drawable.rond, "Ronda"));
+        heroesList.add(new List_heroStructure(R.drawable.dunc, "Duncan"));
+        heroesList.add(new List_heroStructure(R.drawable.blue, "Bluebeard"));
 
 
         mAdapter = new List_heroAdapter(this, heroesList);
