@@ -61,7 +61,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/IntroTheme" />
         <activity
-            android:name=".Hero_Skylee"
+            android:name=".Hero_Magnum"
             android:screenOrientation="portrait"
             android:theme="@style/IntroTheme" />
         <activity
@@ -69,7 +69,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/IntroTheme" />
         <activity
-            android:name=".Hero_Iffir"
+            android:name=".Hero_Zarx"
             android:screenOrientation="portrait"
             android:theme="@style/IntroTheme" />
         <activity

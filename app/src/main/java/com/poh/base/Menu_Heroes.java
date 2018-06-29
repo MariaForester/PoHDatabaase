@@ -69,7 +69,7 @@ public class Menu_Heroes extends Left_menu {
                     startActivityForResult(myintent, 3);
                 }
                 if (position == 4) {
-                    Intent myintent = new Intent(view.getContext(), Hero_Skylee.class);
+                    Intent myintent = new Intent(view.getContext(), Hero_Magnum.class);
                     startActivityForResult(myintent, 4);
                 }
                 if (position == 5) {
@@ -77,7 +77,7 @@ public class Menu_Heroes extends Left_menu {
                     startActivityForResult(myintent, 5);
                 }
                 if (position == 6) {
-                    Intent myintent = new Intent(view.getContext(), Hero_Iffir.class);
+                    Intent myintent = new Intent(view.getContext(), Hero_Zarx.class);
                     startActivityForResult(myintent, 6);
                 }
             }

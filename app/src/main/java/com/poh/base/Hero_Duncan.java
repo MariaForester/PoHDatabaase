@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Hero_Duncan extends AppCompatActivity {
@@ -14,8 +15,8 @@ public class Hero_Duncan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hero_layout);
 
-        TextView heroText = (TextView) findViewById(R.id.heroText);
-        heroText.setText("Duncan coming soon");
+        ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
+        heroLayout.setImageResource(R.drawable.duncan_layer);
     }
 
     public void backBtnClick(View v){

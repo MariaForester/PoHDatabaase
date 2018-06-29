@@ -5,17 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Hero_Skylee extends AppCompatActivity {
+public class Hero_Magnum extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hero_layout);
 
-        TextView heroText = (TextView) findViewById(R.id.heroText);
-        heroText.setText("Skylee coming soon");
+        ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
+        heroLayout.setImageResource(R.drawable.magnum_layer);
     }
 
     public void backBtnClick(View v){

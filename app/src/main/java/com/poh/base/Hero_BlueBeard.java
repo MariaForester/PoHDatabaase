@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.client.DataSnapshot;
@@ -12,14 +13,17 @@ import com.firebase.client.Firebase;
 import com.firebase.client.ValueEventListener;
 
 public class Hero_BlueBeard extends AppCompatActivity {
-    Firebase myFirebase;
+    // Firebase myFirebase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hero_layout);
 
-        final TextView heroText = (TextView) findViewById(R.id.heroText);
+        ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
+        heroLayout.setImageResource(R.drawable.bluebeard_layer);
+
+       /* final TextView heroText = (TextView) findViewById(R.id.heroText);
 
         Firebase.setAndroidContext(getApplicationContext());
 
@@ -37,10 +41,10 @@ public class Hero_BlueBeard extends AppCompatActivity {
                 heroText.setText("Error found");
             }
         });
+        */
     }
 
-
-    public void backBtnClick(View v){
+    public void backBtnClick(View v) {
         this.finish();
     }
 

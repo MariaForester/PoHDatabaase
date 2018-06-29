@@ -14,8 +14,7 @@ public class Hero_Timmy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hero_layout);
 
-        TextView heroText = (TextView) findViewById(R.id.heroText);
-        heroText.setText("Timmy coming soon");
+
     }
 
     public void backBtnClick(View v){
