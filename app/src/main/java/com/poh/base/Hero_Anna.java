@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Hero_Bubbles extends AppCompatActivity {
+public class Hero_Anna extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,9 @@ public class Hero_Bubbles extends AppCompatActivity {
         setContentView(R.layout.hero_layout);
 
         ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
-        heroLayout.setImageResource(R.drawable.bubbles_layer);
+        heroLayout.setImageResource(R.drawable.magnum_layer);
+        TextView heroName = (TextView) findViewById(R.id.heroName);
+        heroName.setText("Anna");
     }
 
     public void backBtnClick(View v){

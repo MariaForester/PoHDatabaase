@@ -10,12 +10,59 @@
         android:orientation="vertical"
         android:weightSum="1280">
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="407"
-            android:scaleType="centerCrop"
-            android:id="@+id/heroLayout"/>
+            android:layout_weight="407">
+
+            <ImageView
+                android:id="@+id/heroLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/planetoon" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="38dp"
+                android:src="@drawable/planetoon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="57dp"
+                android:text="17500"
+                android:textSize="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="50dp"
+                android:textColor="@color/menuButtons"
+                android:fontFamily="@font/a_avantebs"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="87dp"
+                android:text="17500"
+                android:textSize="18dp"
+                android:textColor="@color/menuButtons"
+                android:fontFamily="@font/a_avantebs"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="50dp" />
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,12 +73,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/explore_background"/>
+                android:src="@drawable/explore_background" />
 
             <TextView
+                android:id="@+id/heroText"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/heroText"/>
+                android:layout_height="match_parent" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -42,14 +89,29 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/third_layer" />
         </RelativeLayout>
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="255"
-            android:scaleType="centerCrop"/>
+            android:layout_weight="255">
+
+            <ImageView
+                android:id="@+id/skinHero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Skins"
+                android:textColor="@color/menuButtons"
+                android:fontFamily="@font/extrabold"
+                android:gravity="center"
+                android:textSize="40dp"/>
+        </RelativeLayout>
 
     </LinearLayout>
 
@@ -59,13 +121,24 @@
         android:background="@drawable/arrowback"
         android:onClick="backBtnClick" />
 
+    <TextView
+        android:id="@+id/heroName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/extrabold"
+        android:textColor="@color/menuButtons"
+        android:textSize="20dp"
+        android:layout_marginStart="73dp" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_centerInParent="true"
+        android:layout_gravity="center"
         android:progressDrawable="@drawable/circular_progress_bar" />
 
 </FrameLayout>

@@ -4,7 +4,7 @@
     android:id="@+id/blue"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".Hero_BlueBeard"
+    tools:context=".Hero_Sofia"
     android:orientation="vertical">
 
     <LinearLayout

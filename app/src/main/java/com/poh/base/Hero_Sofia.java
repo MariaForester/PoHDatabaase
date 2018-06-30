@@ -13,7 +13,7 @@ import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.ValueEventListener;
 
-public class Hero_BlueBeard extends AppCompatActivity {
+public class Hero_Sofia extends AppCompatActivity {
     Firebase myFirebase;
     private ProgressBar spinner;
 
@@ -23,7 +23,11 @@ public class Hero_BlueBeard extends AppCompatActivity {
         setContentView(R.layout.hero_layout);
 
         ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
-        heroLayout.setImageResource(R.drawable.bluebeard_layer);
+        heroLayout.setImageResource(R.drawable.duncan_layout);
+        ImageView skinHero = (ImageView) findViewById(R.id.skinHero);
+        skinHero.setImageResource(R.drawable.duncan_skin);
+        TextView heroName = (TextView) findViewById(R.id.heroName);
+        heroName.setText("Sofia");
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
 

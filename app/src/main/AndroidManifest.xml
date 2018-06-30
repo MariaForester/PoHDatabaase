@@ -45,23 +45,7 @@
             android:screenOrientation="portrait" />
         // Heroes Page
         <activity
-            android:name=".Hero_BlueBeard"
-            android:screenOrientation="portrait"
-            android:theme="@style/IntroTheme" />
-        <activity
-            android:name=".Hero_Bubbles"
-            android:screenOrientation="portrait"
-            android:theme="@style/IntroTheme" />
-        <activity
-            android:name=".Hero_Duncan"
-            android:screenOrientation="portrait"
-            android:theme="@style/IntroTheme" />
-        <activity
-            android:name=".Hero_Candy"
-            android:screenOrientation="portrait"
-            android:theme="@style/IntroTheme" />
-        <activity
-            android:name=".Hero_Magnum"
+            android:name=".Hero_Sofia"
             android:screenOrientation="portrait"
             android:theme="@style/IntroTheme" />
         <activity
@@ -69,7 +53,23 @@
             android:screenOrientation="portrait"
             android:theme="@style/IntroTheme" />
         <activity
-            android:name=".Hero_Zarx"
+            android:name=".Hero_Libertron"
+            android:screenOrientation="portrait"
+            android:theme="@style/IntroTheme" />
+        <activity
+            android:name=".Hero_Askari"
+            android:screenOrientation="portrait"
+            android:theme="@style/IntroTheme" />
+        <activity
+            android:name=".Hero_Anna"
+            android:screenOrientation="portrait"
+            android:theme="@style/IntroTheme" />
+        <activity
+            android:name=".Hero_Khan"
+            android:screenOrientation="portrait"
+            android:theme="@style/IntroTheme" />
+        <activity
+            android:name=".Hero_Eizo"
             android:screenOrientation="portrait"
             android:theme="@style/IntroTheme" />
         <activity

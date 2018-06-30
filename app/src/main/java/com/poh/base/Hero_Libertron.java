@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Hero_Zarx extends AppCompatActivity {
+public class Hero_Libertron extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,10 +16,12 @@ public class Hero_Zarx extends AppCompatActivity {
         setContentView(R.layout.hero_layout);
 
         ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
-        heroLayout.setImageResource(R.drawable.zarx_layer);
+        heroLayout.setImageResource(R.drawable.duncan_layer);
+        TextView heroName = (TextView) findViewById(R.id.heroName);
+        heroName.setText("Libertron");
     }
 
-    public void backBtnClick(View v) {
+    public void backBtnClick(View v){
         this.finish();
     }
 

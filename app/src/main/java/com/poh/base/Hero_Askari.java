@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Hero_Magnum extends AppCompatActivity {
+public class Hero_Askari extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,11 @@ public class Hero_Magnum extends AppCompatActivity {
         setContentView(R.layout.hero_layout);
 
         ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
-        heroLayout.setImageResource(R.drawable.magnum_layer);
+        heroLayout.setImageResource(R.drawable.leon_layout);
+        ImageView skinHero = (ImageView) findViewById(R.id.skinHero);
+        skinHero.setImageResource(R.drawable.leon_skin);
+        TextView heroName = (TextView) findViewById(R.id.heroName);
+        heroName.setText("Askari");
     }
 
     public void backBtnClick(View v){

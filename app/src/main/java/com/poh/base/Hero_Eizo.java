@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Hero_Duncan extends AppCompatActivity {
+public class Hero_Eizo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,10 +16,12 @@ public class Hero_Duncan extends AppCompatActivity {
         setContentView(R.layout.hero_layout);
 
         ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
-        heroLayout.setImageResource(R.drawable.duncan_layer);
+        heroLayout.setImageResource(R.drawable.zarx_layer);
+        TextView heroName = (TextView) findViewById(R.id.heroName);
+        heroName.setText("Eizo");
     }
 
-    public void backBtnClick(View v){
+    public void backBtnClick(View v) {
         this.finish();
     }
 

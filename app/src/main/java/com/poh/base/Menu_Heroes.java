@@ -53,31 +53,31 @@ public class Menu_Heroes extends Left_menu {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 if (position == 0) {
-                    Intent myintent = new Intent(view.getContext(), Hero_BlueBeard.class);
+                    Intent myintent = new Intent(view.getContext(), Hero_Sofia.class);
                     startActivityForResult(myintent, 0);
                 }
                 if (position == 1) {
-                    Intent myintent = new Intent(view.getContext(), Hero_Bubbles.class);
+                    Intent myintent = new Intent(view.getContext(), Hero_Timmy.class);
                     startActivityForResult(myintent, 1);
                 }
                 if (position == 2) {
-                    Intent myintent = new Intent(view.getContext(), Hero_Duncan.class);
+                    Intent myintent = new Intent(view.getContext(), Hero_Askari.class);
                     startActivityForResult(myintent, 2);
                 }
                 if (position == 3) {
-                    Intent myintent = new Intent(view.getContext(), Hero_Candy.class);
+                    Intent myintent = new Intent(view.getContext(), Hero_Libertron.class);
                     startActivityForResult(myintent, 3);
                 }
                 if (position == 4) {
-                    Intent myintent = new Intent(view.getContext(), Hero_Magnum.class);
+                    Intent myintent = new Intent(view.getContext(), Hero_Anna.class);
                     startActivityForResult(myintent, 4);
                 }
                 if (position == 5) {
-                    Intent myintent = new Intent(view.getContext(), Hero_Timmy.class);
+                    Intent myintent = new Intent(view.getContext(), Hero_Khan.class);
                     startActivityForResult(myintent, 5);
                 }
                 if (position == 6) {
-                    Intent myintent = new Intent(view.getContext(), Hero_Zarx.class);
+                    Intent myintent = new Intent(view.getContext(), Hero_Eizo.class);
                     startActivityForResult(myintent, 6);
                 }
             }
