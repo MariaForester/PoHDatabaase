@@ -41,12 +41,12 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_toEndOf="@id/second"
-                    android:layout_toRightOf="@id/second"
+                    android:layout_toEndOf="@id/heroPricePlanet"
+                    android:layout_toRightOf="@id/heroPricePlanet"
                     android:src="@drawable/saph" />
 
                 <TextView
-                    android:id="@+id/second"
+                    android:id="@+id/heroPricePlanet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -58,11 +58,11 @@
                     android:shadowDx="1"
                     android:shadowDy="1"
                     android:shadowRadius="2"
-                    android:text="17500"
                     android:textColor="@color/menuButtons"
                     android:textSize="18sp" />
 
                 <TextView
+                    android:id="@+id/heroPriceSaph"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -74,7 +74,6 @@
                     android:shadowDx="1"
                     android:shadowDy="1"
                     android:shadowRadius="2"
-                    android:text="799"
                     android:textColor="@color/menuButtons"
                     android:textSize="18sp" />
             </RelativeLayout>

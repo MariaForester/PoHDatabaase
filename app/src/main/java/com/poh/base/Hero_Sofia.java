@@ -8,13 +8,13 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
 public class Hero_Sofia extends AppCompatActivity {
-    Firebase myFirebase;
+
     private ProgressBar spinner;
 
     @Override
@@ -33,15 +33,19 @@ public class Hero_Sofia extends AppCompatActivity {
         heroClass.setTextColor(getResources().getColor(R.color.redClass));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
+        final TextView pricePlanetText = (TextView) findViewById(R.id.heroPricePlanet);
+        final TextView priceSaphirText = (TextView) findViewById(R.id.heroPriceSaph);
 
         Firebase.setAndroidContext(getApplicationContext());
 
-        myFirebase = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Sofia");
+        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Sofia");
+        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Planetoons/17500");
+        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Saphirites/749");
 
         spinner = (ProgressBar) findViewById(R.id.progressBar);
         spinner.setVisibility(View.VISIBLE);
 
-        myFirebase.addValueEventListener(new ValueEventListener() {
+        heroDescription.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 spinner.setVisibility(View.GONE);
@@ -56,6 +60,35 @@ public class Hero_Sofia extends AppCompatActivity {
             }
         });
 
+        heroPricePlanet.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                spinner.setVisibility(View.GONE);
+                String myChildText = dataSnapshot.getValue(String.class);
+                pricePlanetText.setText(myChildText);
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+                spinner.setVisibility(View.GONE);
+                pricePlanetText.setText("Error found");
+            }
+        });
+
+        heroPriceSaphire.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                spinner.setVisibility(View.GONE);
+                String myChildText = dataSnapshot.getValue(String.class);
+                priceSaphirText.setText(myChildText);
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+                spinner.setVisibility(View.GONE);
+                priceSaphirText.setText("Error found");
+            }
+        });
     }
 
     public void backBtnClick(View v) {
