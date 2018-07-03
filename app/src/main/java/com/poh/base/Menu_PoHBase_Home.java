@@ -33,6 +33,7 @@ public class Menu_PoHBase_Home extends Left_menu {
     private static final Integer[] slideImages2 = {R.drawable.test, R.drawable.test};
     private ArrayList<Integer> slideArray = new ArrayList<>();
     private ArrayList<Integer> slideArray2 = new ArrayList<>();
+    String[] text = new String[] {null, null, null, null, null};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +101,7 @@ public class Menu_PoHBase_Home extends Left_menu {
         Collections.addAll(slideArray, slideImages);
 
         final ViewPager mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(new Slide_adapter(Menu_PoHBase_Home.this, slideArray));
+        mPager.setAdapter(new Slide_adapter(Menu_PoHBase_Home.this, slideArray, text));
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 
@@ -127,7 +128,7 @@ public class Menu_PoHBase_Home extends Left_menu {
         Collections.addAll(slideArray2, slideImages2);
 
         ViewPager mPager2 = (ViewPager) findViewById(R.id.bestpicks);
-        mPager2.setAdapter(new Slide_adapter(Menu_PoHBase_Home.this, slideArray2));
+        mPager2.setAdapter(new Slide_adapter(Menu_PoHBase_Home.this, slideArray2, text));
         indicator = (CircleIndicator) findViewById(R.id.bestpicks2);
         indicator.setViewPager(mPager2);
     }

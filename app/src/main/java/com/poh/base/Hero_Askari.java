@@ -30,7 +30,7 @@ public class Hero_Askari extends AppCompatActivity {
         TextView heroName = (TextView) findViewById(R.id.heroName);
         heroName.setText("Askari");
         TextView heroClass = (TextView) findViewById(R.id.heroClass);
-        heroClass.setText("Fighter");
+        heroClass.setText("ASSASSIN");
         heroClass.setTextColor(getResources().getColor(R.color.blueClass));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
@@ -39,9 +39,9 @@ public class Hero_Askari extends AppCompatActivity {
 
         Firebase.setAndroidContext(getApplicationContext());
 
-        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Askari");
-        Firebase  heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Planetoons/17500");
-        Firebase  heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Saphirites/749");
+        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Askari/Desc");
+        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Askari/Price/Planetoons");
+        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Askari/Price/Saph");
 
         spinner = (ProgressBar) findViewById(R.id.progressBar);
         spinner.setVisibility(View.VISIBLE);

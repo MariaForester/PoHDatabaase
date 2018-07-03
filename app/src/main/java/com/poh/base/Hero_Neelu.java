@@ -30,7 +30,7 @@ public class Hero_Neelu extends AppCompatActivity {
         TextView heroName = (TextView) findViewById(R.id.heroName);
         heroName.setText("Neelu");
         TextView heroClass = (TextView) findViewById(R.id.heroClass);
-        heroClass.setText("Fighter");
+        heroClass.setText("SUPPORT");
         heroClass.setTextColor(getResources().getColor(R.color.greenClass));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
@@ -39,9 +39,9 @@ public class Hero_Neelu extends AppCompatActivity {
 
         Firebase.setAndroidContext(getApplicationContext());
 
-        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Neelu");
-        Firebase  heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Planetoons/6200");
-        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Saphirites/449");
+        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Neelu/Desc");
+        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Neelu/Price/Planetoons");
+        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Neelu/Price/Saph");
 
         spinner = (ProgressBar) findViewById(R.id.progressBar);
         spinner.setVisibility(View.VISIBLE);

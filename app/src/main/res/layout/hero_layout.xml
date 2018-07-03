@@ -120,7 +120,25 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="326"></RelativeLayout>
+            android:layout_weight="326">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/skillText"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicatorSkill"
+                android:layout_width="119dp"
+                android:layout_height="45dp"
+
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp" />
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"

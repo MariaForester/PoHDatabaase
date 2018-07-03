@@ -29,7 +29,7 @@ public class Hero_Libertron extends AppCompatActivity {
         heroName.setText("Libertron");
 
         TextView heroClass = (TextView) findViewById(R.id.heroClass);
-        heroClass.setText("Fighter");
+        heroClass.setText("WARRIOR");
         heroClass.setTextColor(getResources().getColor(R.color.yellowClass));
 
 
@@ -39,9 +39,9 @@ public class Hero_Libertron extends AppCompatActivity {
 
         Firebase.setAndroidContext(getApplicationContext());
 
-        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Libertron");
-        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Planetoons/17500");
-        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Saphirites/749");
+        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Libertron/Desc");
+        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Libertron/Price/Planetoons");
+        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Libertron/Price/Saph");
 
         spinner = (ProgressBar) findViewById(R.id.progressBar);
         spinner.setVisibility(View.VISIBLE);

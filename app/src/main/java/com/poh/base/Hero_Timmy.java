@@ -30,7 +30,7 @@ public class Hero_Timmy extends AppCompatActivity {
         TextView heroName = (TextView) findViewById(R.id.heroName);
         heroName.setText("Timmy");
         TextView heroClass = (TextView) findViewById(R.id.heroClass);
-        heroClass.setText("Fighter");
+        heroClass.setText("MARKSMAN");
         heroClass.setTextColor(getResources().getColor(R.color.redClass));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
@@ -39,9 +39,9 @@ public class Hero_Timmy extends AppCompatActivity {
 
         Firebase.setAndroidContext(getApplicationContext());
 
-        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Timmy");
-        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Planetoons/17500");
-        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Saphirites/749");
+        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Timmy/Desc");
+        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Timmy/Price/Planetoons");
+        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Timmy/Price/Saph");
 
         spinner = (ProgressBar) findViewById(R.id.progressBar);
         spinner.setVisibility(View.VISIBLE);

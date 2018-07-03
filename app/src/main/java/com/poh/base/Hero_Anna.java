@@ -1,6 +1,7 @@
 package com.poh.base;
 
 import android.os.Handler;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,26 +9,41 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import me.relex.circleindicator.CircleIndicator;
+
 public class Hero_Anna extends AppCompatActivity {
 
     private ProgressBar spinner;
+    String[] text = new String[]{"1 skill", "2 skill", "3 skill", "4 skill"};
+    private static final Integer[] slideImages = {R.color.background, R.color.background, R.color.background, R.color.background};
+    private ArrayList<Integer> slideArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hero_layout);
 
+        init();
+
         ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
         heroLayout.setImageResource(R.drawable.anna_layout);
+        ImageView skinHero = (ImageView) findViewById(R.id.skinHero);
+        skinHero.setImageResource(R.drawable.leon_skin);
         TextView heroName = (TextView) findViewById(R.id.heroName);
         heroName.setText("Anna");
         TextView heroClass = (TextView) findViewById(R.id.heroClass);
-        heroClass.setText("Fighter");
+        heroClass.setText("MARKSMAN");
         heroClass.setTextColor(getResources().getColor(R.color.redClass));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
@@ -36,9 +52,9 @@ public class Hero_Anna extends AppCompatActivity {
 
         Firebase.setAndroidContext(getApplicationContext());
 
-        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Anna");
-        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Planetoons/0");
-        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Saphirites/0");
+        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Anna/Desc");
+        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Anna/Price/Planetoons");
+        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Anna/Price/Saph");
 
         spinner = (ProgressBar) findViewById(R.id.progressBar);
         spinner.setVisibility(View.VISIBLE);
@@ -89,7 +105,7 @@ public class Hero_Anna extends AppCompatActivity {
         });
     }
 
-    public void backBtnClick(View v){
+    public void backBtnClick(View v) {
         this.finish();
     }
 
@@ -103,5 +119,14 @@ public class Hero_Anna extends AppCompatActivity {
                         WindowManager.LayoutParams.FLAG_FULLSCREEN);
             }
         }, 0);
+    }
+
+    private void init() {
+        Collections.addAll(slideArray, slideImages);
+
+        final ViewPager mPager = (ViewPager) findViewById(R.id.skillText);
+        mPager.setAdapter(new Slide_adapter(Hero_Anna.this, slideArray, text));
+        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicatorSkill);
+        indicator.setViewPager(mPager);
     }
 }

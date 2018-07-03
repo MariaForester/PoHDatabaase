@@ -28,7 +28,7 @@ public class Hero_Khan extends AppCompatActivity {
         ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
         heroLayout.setImageResource(R.drawable.khanley_layout);
         TextView heroClass = (TextView) findViewById(R.id.heroClass);
-        heroClass.setText("Fighter");
+        heroClass.setText("WARRIOR");
         heroClass.setTextColor(getResources().getColor(R.color.yellowClass));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
@@ -37,9 +37,9 @@ public class Hero_Khan extends AppCompatActivity {
 
         Firebase.setAndroidContext(getApplicationContext());
 
-        Firebase heroDescription= new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Khanley");
-        Firebase  heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Planetoons/11500");
-        Firebase  heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Saphirites/599");
+        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Khanley/Desc");
+        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Khanley/Price/Planetoons");
+        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Khanley/Price/Saph");
 
         spinner = (ProgressBar) findViewById(R.id.progressBar);
         spinner.setVisibility(View.VISIBLE);

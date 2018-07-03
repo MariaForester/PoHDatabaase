@@ -30,7 +30,7 @@ public class Hero_Bluebeard extends AppCompatActivity {
         TextView heroName = (TextView) findViewById(R.id.heroName);
         heroName.setText("Bluebeard");
         TextView heroClass = (TextView) findViewById(R.id.heroClass);
-        heroClass.setText("Fighter");
+        heroClass.setText("WARRIOR");
         heroClass.setTextColor(getResources().getColor(R.color.yellowClass));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
@@ -39,9 +39,9 @@ public class Hero_Bluebeard extends AppCompatActivity {
 
         Firebase.setAndroidContext(getApplicationContext());
 
-        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Bluebeard");
-        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Planetoons/1450");
-        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Saphirites/149");
+        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Bluebeard/Desc");
+        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Bluebeard/Price/Planetoons");
+        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Bluebeard/Price/Saph");
 
 
         spinner = (ProgressBar) findViewById(R.id.progressBar);

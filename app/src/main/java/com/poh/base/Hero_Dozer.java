@@ -30,7 +30,7 @@ public class Hero_Dozer extends AppCompatActivity {
         TextView heroName = (TextView) findViewById(R.id.heroName);
         heroName.setText("Dozer");
         TextView heroClass = (TextView) findViewById(R.id.heroClass);
-        heroClass.setText("Fighter");
+        heroClass.setText("WARRIOR");
         heroClass.setTextColor(getResources().getColor(R.color.yellowClass));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
@@ -39,9 +39,9 @@ public class Hero_Dozer extends AppCompatActivity {
 
         Firebase.setAndroidContext(getApplicationContext());
 
-        Firebase  heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Dozer");
-        Firebase  heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Planetoons/3250");
-        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Price/Saphirites/299");
+        Firebase heroDescription = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Dozer/Desc");
+        Firebase heroPricePlanet = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Dozer/Price/Planetoons");
+        Firebase heroPriceSaphire = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Dozer/Price/Saph");
 
         spinner = (ProgressBar) findViewById(R.id.progressBar);
         spinner.setVisibility(View.VISIBLE);
