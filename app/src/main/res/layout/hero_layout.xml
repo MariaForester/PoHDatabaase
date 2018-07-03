@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/background"
     android:orientation="vertical">
 
     <LinearLayout
@@ -19,79 +20,108 @@
                 android:id="@+id/heroLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop" />
 
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="140dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp"
-                android:src="@drawable/planetoon" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp">
 
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="140dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="38dp"
-                android:src="@drawable/planetoon" />
+                <ImageView
+                    android:id="@+id/first"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/planetoon" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="57dp"
-                android:text="17500"
-                android:textSize="18dp"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="50dp"
-                android:textColor="@color/menuButtons"
-                android:fontFamily="@font/a_avantebs"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="87dp"
-                android:text="17500"
-                android:textSize="18dp"
-                android:textColor="@color/menuButtons"
-                android:fontFamily="@font/a_avantebs"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="50dp" />
+                <ImageView
+                    android:id="@+id/third"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toEndOf="@id/second"
+                    android:layout_toRightOf="@id/second"
+                    android:src="@drawable/saph" />
+
+                <TextView
+                    android:id="@+id/second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toEndOf="@id/first"
+                    android:layout_toRightOf="@id/first"
+                    android:fontFamily="@font/extrabold"
+                    android:shadowColor="@color/colorPrimaryDark"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="17500"
+                    android:textColor="@color/menuButtons"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toEndOf="@id/third"
+                    android:layout_toRightOf="@id/third"
+                    android:fontFamily="@font/extrabold"
+                    android:shadowColor="@color/colorPrimaryDark"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="799"
+                    android:textColor="@color/menuButtons"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="4dp"
             android:layout_weight="292">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/explore_background" />
+                android:src="@drawable/test3" />
 
             <TextView
                 android:id="@+id/heroText"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/a_avantebs"
+                android:gravity="start"
+                android:maxLines="4"
+                android:textColor="@color/menuButtons"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/heroClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginRight="14dp"
+                android:fontFamily="@font/extrabold"
+                android:textSize="28sp" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="326">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/third_layer" />
-        </RelativeLayout>
+            android:layout_weight="326"></RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -103,14 +133,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Skins"
-                android:textColor="@color/menuButtons"
                 android:fontFamily="@font/extrabold"
                 android:gravity="center"
-                android:textSize="40dp"/>
+                android:shadowColor="@color/colorPrimaryDark"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="25"
+                android:text="Skins"
+                android:textColor="@color/menuButtons"
+                android:textSize="40dp" />
         </RelativeLayout>
 
     </LinearLayout>
@@ -126,11 +161,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="73dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="1dp"
         android:fontFamily="@font/extrabold"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="10"
         android:textColor="@color/menuButtons"
-        android:textSize="20dp"
-        android:layout_marginStart="73dp" />
+        android:textSize="20dp" />
 
     <ProgressBar
         android:id="@+id/progressBar"

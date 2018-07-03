@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
     <item
         android:id="@+id/pohbase"
         android:icon="@drawable/ic_home_black_24dp"
@@ -11,7 +12,7 @@
     <item
         android:id="@+id/sparks"
         android:title="Sparks"
-        android:icon="@drawable/ic_whatshot_black_24dp"/>
+        android:icon="@drawable/ic_whatshot_black_24dp" />
     <item
         android:id="@+id/guides"
         android:title="Guides"
@@ -24,4 +25,5 @@
         android:id="@+id/arts"
         android:title="Arts"
         android:icon="@drawable/ic_palette_black_24dp"/>
+</group>
 </menu>

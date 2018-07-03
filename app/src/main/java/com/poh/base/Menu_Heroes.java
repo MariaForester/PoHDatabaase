@@ -80,6 +80,58 @@ public class Menu_Heroes extends Left_menu {
                     Intent myintent = new Intent(view.getContext(), Hero_Eizo.class);
                     startActivityForResult(myintent, 6);
                 }
+                if (position == 7) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Yumi.class);
+                    startActivityForResult(myintent, 7);
+                }
+                if (position == 8) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Iffir.class);
+                    startActivityForResult(myintent, 8);
+                }
+                if (position == 9) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Leon.class);
+                    startActivityForResult(myintent, 9);
+                }
+                if (position == 10) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Neelu.class);
+                    startActivityForResult(myintent, 10);
+                }
+                if (position == 11) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Dozer.class);
+                    startActivityForResult(myintent, 11);
+                }
+                if (position == 12) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Candy.class);
+                    startActivityForResult(myintent, 12);
+                }
+                if (position == 13) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Zarx.class);
+                    startActivityForResult(myintent, 13);
+                }
+                if (position == 14) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Skylee.class);
+                    startActivityForResult(myintent, 14);
+                }
+                if (position == 15) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Bubbles.class);
+                    startActivityForResult(myintent, 15);
+                }
+                if (position == 16) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Magnum.class);
+                    startActivityForResult(myintent, 16);
+                }
+                if (position == 17) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Ronda.class);
+                    startActivityForResult(myintent, 17);
+                }
+                if (position == 18) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Duncan.class);
+                    startActivityForResult(myintent, 18);
+                }
+                if (position == 19) {
+                    Intent myintent = new Intent(view.getContext(), Hero_Bluebeard.class);
+                    startActivityForResult(myintent, 19);
+                }
             }
         });
     }

@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
     android:weightSum="12">
 
     <RelativeLayout
@@ -13,35 +14,33 @@
         <android.support.v4.view.ViewPager
             android:id="@+id/pager"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-             />
+            android:layout_height="fill_parent" />
 
         <me.relex.circleindicator.CircleIndicator
             android:id="@+id/indicator"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_alignParentBottom="true"
-            />
+            android:layout_alignParentBottom="true" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5">
+        android:layout_weight="5"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:src="@drawable/mainlayout"
+            android:layout_gravity="center"
             android:scaleType="centerCrop"
-            android:layout_gravity="center">
-        </ImageView>
+            android:src="@drawable/test3" />
 
         <android.support.v4.view.ViewPager
             android:id="@+id/bestpicks"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            />
+            android:layout_height="fill_parent" />
 
         <TextView
             android:layout_width="400dp"
@@ -71,15 +70,32 @@
     </RelativeLayout>
 
 
-
-    <ImageView
-        android:layout_width="fill_parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
-        android:src="@drawable/exploremaps"
-        android:scaleType="centerCrop"
-        android:layout_gravity="center"
-        android:id="@+id/maps"
-        android:onClick="BtnClick">
-    </ImageView>
+        android:layout_weight="3">
+
+        <ImageView
+            android:id="@+id/maps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:onClick="BtnClick"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/extrabold"
+            android:gravity="center"
+            android:text="Explore maps"
+            android:shadowColor="@color/colorPrimaryDark"
+            android:shadowDy="1"
+            android:shadowDx="1"
+            android:shadowRadius="2"
+            android:textColor="@color/menuButtons"
+            android:textSize="25sp" />
+    </RelativeLayout>
 </LinearLayout>

@@ -18,7 +18,7 @@ public class sparkView2 extends AppCompatActivity {
         setContentView(R.layout.sparks_layout);
 
         ImageView sparkView = (ImageView) findViewById(R.id.sparkView);
-        sparkView.setImageResource(R.drawable.explore_background);
+        sparkView.setImageResource(R.drawable.background);
 
         TextView sparkText = (TextView) findViewById(R.id.sparksText);
         sparkText.setText("This spark page is going to be updated soon");

@@ -30,7 +30,7 @@ public class Menu_PoHBase_Home extends Left_menu {
 
     private static int currentPage = 0;
     private static final Integer[] slideImages = {R.drawable.sofiawelcometwo};
-    private static final Integer[] slideImages2 = {R.drawable.icons, R.drawable.icons_test2};
+    private static final Integer[] slideImages2 = {R.drawable.test, R.drawable.test};
     private ArrayList<Integer> slideArray = new ArrayList<>();
     private ArrayList<Integer> slideArray2 = new ArrayList<>();
 

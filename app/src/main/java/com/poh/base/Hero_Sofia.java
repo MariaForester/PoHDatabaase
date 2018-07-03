@@ -23,17 +23,20 @@ public class Hero_Sofia extends AppCompatActivity {
         setContentView(R.layout.hero_layout);
 
         ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
-        heroLayout.setImageResource(R.drawable.duncan_layout);
+        heroLayout.setImageResource(R.drawable.sofia_layout);
         ImageView skinHero = (ImageView) findViewById(R.id.skinHero);
         skinHero.setImageResource(R.drawable.duncan_skin);
         TextView heroName = (TextView) findViewById(R.id.heroName);
         heroName.setText("Sofia");
+        TextView heroClass = (TextView) findViewById(R.id.heroClass);
+        heroClass.setText("Fighter");
+        heroClass.setTextColor(getResources().getColor(R.color.redClass));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
 
         Firebase.setAndroidContext(getApplicationContext());
 
-        myFirebase = new Firebase("https://planet-of-heroes-base.firebaseio.com/Text");
+        myFirebase = new Firebase("https://planet-of-heroes-base.firebaseio.com/Heroes/Sofia");
 
         spinner = (ProgressBar) findViewById(R.id.progressBar);
         spinner.setVisibility(View.VISIBLE);

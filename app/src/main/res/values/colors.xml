@@ -5,5 +5,9 @@
     <color name="colorAccent">#bda3ff</color>
     <color name="background">#070719</color>
     <color name="menuButtons">#ffffff</color>
+    <color name="redClass">#ff6b6b</color>
+    <color name="blueClass">#409cff</color>
+    <color name="yellowClass">#fdff73</color>
+    <color name="greenClass">#94ff82</color>
 
 </resources>

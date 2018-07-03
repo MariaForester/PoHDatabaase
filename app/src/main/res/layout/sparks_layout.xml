@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".Sparks_1_5"
     android:id="@+id/sparks"
-    android:background="@drawable/explore_background">
+    android:background="@drawable/background">
 
     <ImageView
         android:layout_width="match_parent"

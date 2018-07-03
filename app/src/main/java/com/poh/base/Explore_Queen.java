@@ -19,7 +19,7 @@ public class Explore_Queen extends AppCompatActivity {
         heroText.setText("Queen coming soon");
 
         ImageView queenImage = (ImageView) findViewById(R.id.photox);
-        queenImage.setImageResource(R.drawable.explore_background);
+        queenImage.setImageResource(R.drawable.background);
     }
     public void backBtnClick(View v){
         this.finish();
