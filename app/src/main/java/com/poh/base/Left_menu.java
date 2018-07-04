@@ -58,7 +58,6 @@ public abstract class Left_menu extends AppCompatActivity implements MenuItem.On
     }
 
 
-
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -148,9 +147,14 @@ public abstract class Left_menu extends AppCompatActivity implements MenuItem.On
                 startActivityForResult(myintent5, 5);
                 this.finish();
                 break;
-            default:
-                Intent myintent6 = new Intent(getBaseContext(), Menu_PoHBase_Home.class);
+            case R.id.about_us:
+                Intent myintent6 = new Intent(getBaseContext(), Menu_About_us.class);
                 startActivityForResult(myintent6, 6);
+                this.finish();
+                break;
+            default:
+                Intent myintent7 = new Intent(getBaseContext(), Menu_PoHBase_Home.class);
+                startActivityForResult(myintent7, 7);
                 this.finish();
                 break;
         }

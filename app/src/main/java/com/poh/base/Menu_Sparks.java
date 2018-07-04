@@ -93,7 +93,7 @@ public class Menu_Sparks extends Left_menu {
         });
     }
 
-    @Override                              //masha - back button - to the main act
+    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             Intent intent = new Intent(Menu_Sparks.this, Menu_PoHBase_Home.class);
