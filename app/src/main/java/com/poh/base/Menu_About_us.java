@@ -20,7 +20,7 @@ public class Menu_About_us extends Left_menu {
             Intent intent = new Intent(Menu_About_us.this, Menu_PoHBase_Home.class);
             startActivity(intent);
             this.finish();
-        }
+        } 
         return false;
     }
 }
