@@ -4,10 +4,13 @@
     <color name="colorPrimaryDark">#070719</color>
     <color name="colorAccent">#bda3ff</color>
     <color name="background">#070719</color>
-    <color name="menuButtons">#ffffff</color>
-    <color name="redClass">#ff6b6b</color>
-    <color name="blueClass">#409cff</color>
-    <color name="yellowClass">#fdff73</color>
-    <color name="greenClass">#94ff82</color>
+    <color name="wight">#ffffff</color>
+    <color name="marksman">#ff6b6b</color>
+    <color name="assassin">#ffac7c</color>
+    <color name="warrior">#fdff73</color>
+    <color name="support">#94ff82</color>
+    <color name="mage">#ff80fd</color>
+    <color name="skillNumber">#ff7300</color>
+    <color name="skillText">#ffd0aa</color>
 
 </resources>

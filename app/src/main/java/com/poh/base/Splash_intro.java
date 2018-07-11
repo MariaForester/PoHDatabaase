@@ -32,10 +32,6 @@ public class Splash_intro extends AppCompatActivity {
         }, 0);
 
 
-        RelativeLayout psh = (RelativeLayout) findViewById(R.id.activity_spalsh);
-
-        Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
-        psh.startAnimation(myanim);
         final Intent i = new Intent(this, Menu_PoHBase_Home.class);
         Thread timer = new Thread() {
             public void run() {
@@ -53,11 +49,8 @@ public class Splash_intro extends AppCompatActivity {
 
     }
 
-    @Override                                                //masha - non-clickable back button
+    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK)
-            Toast.makeText(getApplicationContext(), "",
-                    Toast.LENGTH_LONG).getView();
         return false;
     }
 }

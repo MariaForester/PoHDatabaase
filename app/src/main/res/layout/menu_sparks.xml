@@ -21,9 +21,9 @@
         android:hint=" type"
         android:fontFamily="@font/a_avantebs"
         android:textSize="28sp"
-        android:textColorHint="@color/menuButtons"
-        android:textColor="@color/menuButtons"
-        android:backgroundTint="@color/menuButtons"
+        android:textColorHint="@color/wight"
+        android:textColor="@color/wight"
+        android:backgroundTint="@color/wight"
             />
 
     <Button

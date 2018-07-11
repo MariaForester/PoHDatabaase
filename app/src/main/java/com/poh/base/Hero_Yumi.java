@@ -2,7 +2,9 @@ package com.poh.base;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -14,24 +16,38 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
+import me.relex.circleindicator.CircleIndicator;
+
 public class Hero_Yumi extends AppCompatActivity {
 
     private ProgressBar spinner;
+    String[] text = new String[]{"Bouncing Grenade", "2 skill", "3 skill", "4 skill"};
+    String[] text2 = new String[]{
+            "Yumi throws a bouncing grenade to the target area, exploding and dealing 300-550" +
+                    " + 2.7 * Ability power damage upon coming near a foe or reaching the end of " +
+                    "it's trajectory",
+            "zzzzzzzzzzzzzzzzz", null, null
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hero_layout);
 
+        init();
+
         ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
         heroLayout.setImageResource(R.drawable.yumi_layout);
         ImageView skinHero = (ImageView) findViewById(R.id.skinHero);
-        skinHero.setImageResource(R.drawable.khanley_skin);
+        skinHero.setImageResource(R.drawable.skin_layout);
         TextView heroName = (TextView) findViewById(R.id.heroName);
         heroName.setText("Yumi");
         TextView heroClass = (TextView) findViewById(R.id.heroClass);
         heroClass.setText("MARKSMAN");
-        heroClass.setTextColor(getResources().getColor(R.color.redClass));
+        heroClass.setTextColor(getResources().getColor(R.color.marksman));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
         final TextView pricePlanetText = (TextView) findViewById(R.id.heroPricePlanet);
@@ -51,7 +67,7 @@ public class Hero_Yumi extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 spinner.setVisibility(View.GONE);
                 String myChildText = dataSnapshot.getValue(String.class);
-                heroText.setText(myChildText);
+                heroText.setText(Html.fromHtml(myChildText), TextView.BufferType.SPANNABLE);
             }
 
             @Override
@@ -92,7 +108,7 @@ public class Hero_Yumi extends AppCompatActivity {
         });
     }
 
-    public void backBtnClick(View v){
+    public void backBtnClick(View v) {
         this.finish();
     }
 
@@ -106,5 +122,13 @@ public class Hero_Yumi extends AppCompatActivity {
                         WindowManager.LayoutParams.FLAG_FULLSCREEN);
             }
         }, 0);
+    }
+
+    private void init() {
+
+        final ViewPager mPager = (ViewPager) findViewById(R.id.skillNumber);
+        mPager.setAdapter(new Slide_adapter(Hero_Yumi.this, new ArrayList<Integer>(), text, text2));
+        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicatorSkill);
+        indicator.setViewPager(mPager);
     }
 }

@@ -9,9 +9,7 @@ import android.widget.GridView;
 
 public class Menu_Guides extends Left_menu {
     GridView simpleGrid;
-    int logos[] = {R.drawable.skysqr, R.drawable.duncsqr, R.drawable.candsqr,
-            R.drawable.bluesq, R.drawable.bubbsqr, R.drawable.candsqr, R.drawable.duncsqr
-            , R.drawable.bubbsqr, R.drawable.bluesq, R.drawable.skysqr};
+    int logos[] = {};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

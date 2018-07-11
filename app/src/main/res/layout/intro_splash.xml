@@ -11,7 +11,7 @@
             android:fontFamily="@font/magneto"
             android:gravity="center"
             android:text="@string/pohbase"
-            android:textColor="@color/menuButtons"
+            android:textColor="@color/wight"
             android:textSize="35sp"
             />
 

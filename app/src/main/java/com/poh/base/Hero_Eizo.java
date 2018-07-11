@@ -1,8 +1,10 @@
 package com.poh.base;
 
 import android.os.Handler;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -14,22 +16,35 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
+import me.relex.circleindicator.CircleIndicator;
+
 public class Hero_Eizo extends AppCompatActivity {
 
     private ProgressBar spinner;
+    String[] text = new String[]{"1 skill", "2 skill", "3 skill", "4 skill"};
+    String[] text2 = new String[]{"dbbbbb", "zzzzzzzzzzzzzzzzz", null, null};
+    private static final Integer[] slideImages = {R.color.background, R.color.background, R.color.background, R.color.background};
+    private ArrayList<Integer> slideArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hero_layout);
 
+        init();
+
         ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
         heroLayout.setImageResource(R.drawable.eizo_layout);
+        ImageView skinHero = (ImageView) findViewById(R.id.skinHero);
+        skinHero.setImageResource(R.drawable.skin_layout);
         TextView heroName = (TextView) findViewById(R.id.heroName);
         heroName.setText("Eizo");
         TextView heroClass = (TextView) findViewById(R.id.heroClass);
         heroClass.setText("SUPPORT");
-        heroClass.setTextColor(getResources().getColor(R.color.greenClass));
+        heroClass.setTextColor(getResources().getColor(R.color.support));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
         final TextView pricePlanetText = (TextView) findViewById(R.id.heroPricePlanet);
@@ -49,7 +64,7 @@ public class Hero_Eizo extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 spinner.setVisibility(View.GONE);
                 String myChildText = dataSnapshot.getValue(String.class);
-                heroText.setText(myChildText);
+                heroText.setText(Html.fromHtml(myChildText), TextView.BufferType.SPANNABLE);
             }
 
             @Override
@@ -104,5 +119,13 @@ public class Hero_Eizo extends AppCompatActivity {
                         WindowManager.LayoutParams.FLAG_FULLSCREEN);
             }
         }, 0);
+    }
+    private void init() {
+        Collections.addAll(slideArray, slideImages);
+
+        final ViewPager mPager = (ViewPager) findViewById(R.id.skillNumber);
+        mPager.setAdapter(new Slide_adapter(Hero_Eizo.this, slideArray, text, text2));
+        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicatorSkill);
+        indicator.setViewPager(mPager);
     }
 }

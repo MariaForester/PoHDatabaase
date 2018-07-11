@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="30sp"
-        android:textColor="@color/menuButtons"
+        android:textColor="@color/wight"
         android:fontFamily="@font/extrabold" />
 
     <Button

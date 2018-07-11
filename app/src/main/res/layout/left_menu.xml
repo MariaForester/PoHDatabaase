@@ -17,8 +17,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/colorPrimary"
-        app:itemIconTint="@color/menuButtons"
-        app:itemTextColor="@color/menuButtons"
+        app:itemIconTint="@color/wight"
+        app:itemTextColor="@color/wight"
         app:menu="@menu/drawermenu"
         android:fitsSystemWindows="true"/>
 </android.support.v4.widget.DrawerLayout>

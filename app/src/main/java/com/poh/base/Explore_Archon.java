@@ -29,8 +29,8 @@ public class Explore_Archon extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.explore_bosses_layout);
 
-        ImageView imageView = (ImageView) findViewById(R.id.photox);
-        imageView.setImageResource(R.drawable.archon_mainpage);
+        //ImageView imageView = (ImageView) findViewById(R.id.photox);
+        //imageView.setImageResource(R.drawable.archon_mainpage);
 
         //   final ImageView imageView = (ImageView) findViewById(R.id.photox);
 

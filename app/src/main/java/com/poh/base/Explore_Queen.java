@@ -15,11 +15,6 @@ public class Explore_Queen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.explore_bosses_layout);
 
-        TextView heroText = (TextView) findViewById(R.id.bossText);
-        heroText.setText("Queen coming soon");
-
-        ImageView queenImage = (ImageView) findViewById(R.id.photox);
-        queenImage.setImageResource(R.drawable.background);
     }
     public void backBtnClick(View v){
         this.finish();

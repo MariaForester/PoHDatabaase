@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -17,8 +18,6 @@ import com.firebase.client.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import me.relex.circleindicator.CircleIndicator;
 
@@ -26,6 +25,7 @@ public class Hero_Anna extends AppCompatActivity {
 
     private ProgressBar spinner;
     String[] text = new String[]{"1 skill", "2 skill", "3 skill", "4 skill"};
+    String[] text2 = new String[]{"dbbbbb", "zzzzzzzzzzzzzzzzz", null, null};
     private static final Integer[] slideImages = {R.color.background, R.color.background, R.color.background, R.color.background};
     private ArrayList<Integer> slideArray = new ArrayList<>();
 
@@ -39,12 +39,12 @@ public class Hero_Anna extends AppCompatActivity {
         ImageView heroLayout = (ImageView) findViewById(R.id.heroLayout);
         heroLayout.setImageResource(R.drawable.anna_layout);
         ImageView skinHero = (ImageView) findViewById(R.id.skinHero);
-        skinHero.setImageResource(R.drawable.leon_skin);
+        skinHero.setImageResource(R.drawable.skin_layout);
         TextView heroName = (TextView) findViewById(R.id.heroName);
         heroName.setText("Anna");
         TextView heroClass = (TextView) findViewById(R.id.heroClass);
         heroClass.setText("MARKSMAN");
-        heroClass.setTextColor(getResources().getColor(R.color.redClass));
+        heroClass.setTextColor(getResources().getColor(R.color.marksman));
 
         final TextView heroText = (TextView) findViewById(R.id.heroText);
         final TextView pricePlanetText = (TextView) findViewById(R.id.heroPricePlanet);
@@ -64,7 +64,7 @@ public class Hero_Anna extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 spinner.setVisibility(View.GONE);
                 String myChildText = dataSnapshot.getValue(String.class);
-                heroText.setText(myChildText);
+                heroText.setText(Html.fromHtml(myChildText), TextView.BufferType.SPANNABLE);
             }
 
             @Override
@@ -124,8 +124,8 @@ public class Hero_Anna extends AppCompatActivity {
     private void init() {
         Collections.addAll(slideArray, slideImages);
 
-        final ViewPager mPager = (ViewPager) findViewById(R.id.skillText);
-        mPager.setAdapter(new Slide_adapter(Hero_Anna.this, slideArray, text));
+        final ViewPager mPager = (ViewPager) findViewById(R.id.skillNumber);
+        mPager.setAdapter(new Slide_adapter(Hero_Anna.this, slideArray, text, text2));
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicatorSkill);
         indicator.setViewPager(mPager);
     }

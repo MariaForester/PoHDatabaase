@@ -10,15 +10,19 @@ import android.widget.GridView;
 public class Menu_Arts extends Left_menu {
 
     GridView simpleGrid;
-    int logos[] = {R.drawable.skysqr, R.drawable.duncsqr, R.drawable.candsqr,
-            R.drawable.bluesq, R.drawable.bubbsqr, R.drawable.candsqr, R.drawable.duncsqr
-            , R.drawable.bubbsqr, R.drawable.bluesq, R.drawable.skysqr, R.drawable.skysqr, R.drawable.duncsqr, R.drawable.candsqr,
-            R.drawable.bluesq, R.drawable.bubbsqr, R.drawable.candsqr, R.drawable.duncsqr
-            , R.drawable.bubbsqr, R.drawable.bluesq, R.drawable.skysqr, R.drawable.skysqr, R.drawable.duncsqr, R.drawable.candsqr,
-            R.drawable.bluesq, R.drawable.bubbsqr, R.drawable.candsqr, R.drawable.duncsqr
-            , R.drawable.bubbsqr, R.drawable.bluesq, R.drawable.skysqr, R.drawable.skysqr, R.drawable.duncsqr, R.drawable.candsqr,
-            R.drawable.bluesq, R.drawable.bubbsqr, R.drawable.candsqr, R.drawable.duncsqr
-            , R.drawable.bubbsqr, R.drawable.bluesq, R.drawable.skysqr};
+    int logos[] = {
+            R.drawable.sofiawelcometwo, R.drawable.sof, R.drawable.bluebeard_layout, R.drawable.bubbles_layout,
+            R.drawable.sofiawelcometwo, R.drawable.anna_layout, R.drawable.bluebeard_layout, R.drawable.bubbles_layout,
+            R.drawable.sofiawelcometwo, R.drawable.anna_layout, R.drawable.bluebeard_layout, R.drawable.bubbles_layout,
+            R.drawable.sofiawelcometwo, R.drawable.anna_layout, R.drawable.bluebeard_layout, R.drawable.bubbles_layout,
+            R.drawable.sofiawelcometwo, R.drawable.anna_layout, R.drawable.bluebeard_layout, R.drawable.bubbles_layout,
+            R.drawable.sofiawelcometwo, R.drawable.anna_layout, R.drawable.bluebeard_layout, R.drawable.bubbles_layout,
+            R.drawable.sofiawelcometwo, R.drawable.anna_layout, R.drawable.bluebeard_layout, R.drawable.bubbles_layout,
+            R.drawable.sofiawelcometwo, R.drawable.anna_layout, R.drawable.bluebeard_layout, R.drawable.bubbles_layout,
+            R.drawable.sofiawelcometwo, R.drawable.anna_layout, R.drawable.bluebeard_layout, R.drawable.bubbles_layout,
+            R.drawable.sofiawelcometwo, R.drawable.anna_layout, R.drawable.bluebeard_layout, R.drawable.bubbles_layout,
+            R.drawable.sofiawelcometwo, R.drawable.anna_layout, R.drawable.bluebeard_layout, R.drawable.bubbles_layout,
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
